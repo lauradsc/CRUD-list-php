@@ -1,6 +1,6 @@
 <?php 
     class Body {
-        public function header($style = "style.css", $title = "Dev Jobs", $favicon = "") {
+        public function header($style = "style.css", $title = "test", $favicon = "") {
             echo '<!doctype html>
             <html lang="en">
               <head>
@@ -9,13 +9,14 @@
                 <title>'.$title.'</title>
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
               </head>
-              <body class="bg-dark text-dark">
-                <div class="container">
-                    <div class="jumbotron bg-light bg-gradient">
-                        <h1>Dev Jobs</h1>
-                        <p>Find your best area</p>
-                    </div>
-                </div>
+              <body class="text-dark">
+                  <nav class="navbar">
+                  <div class="container">
+                    <a class="navbar-brand" href="#">
+                      <img src="" alt="test" width="30" height="24">
+                    </a>
+                  </div>
+                </nav>
             ';
         }
 
