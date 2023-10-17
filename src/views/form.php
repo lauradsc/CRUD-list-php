@@ -1,3 +1,5 @@
+<!-- //NOTE - the interface -->
+
 <?php 
 
     include __DIR__. './../components/body.php';
