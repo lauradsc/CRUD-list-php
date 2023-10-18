@@ -10,13 +10,13 @@
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
               </head>
               <body class="text-dark">
-                  <nav class="navbar">
-                  <div class="container">
-                    <a class="navbar-brand" href="#">
-                      <img src="" alt="test" width="30" height="24">
-                    </a>
-                  </div>
-                </nav>
+                <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="" alt="" class="w-75">
+                  </a>
+                </div>
+              </nav>
             ';
         }
 
@@ -27,6 +27,5 @@
         </html>';
         }
     }
-
 
 ?>

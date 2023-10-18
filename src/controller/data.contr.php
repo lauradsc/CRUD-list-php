@@ -3,18 +3,29 @@
    //NOTE - my conversation between the model and view
       include './../model/config/conn.php';
       
-       if(isset($_POST['submit'])) {
+       class DataContr extends Conn {
+        public function insert($title, $desc, $status) {
+            $pdo = $this->connect();
 
-        $title = $_POST['title'];
-        $desc = $_POST['desc'];
-        $status = $_POST['status'];
+            try {
+                $stmt = $pdo->prepare("INSERT INTO tasks (title, description, status) values (:title, :description, :status)");
+                $stmt->bindParam(':title', $title);
+                $stmt->bindParam(':description', $desc);
+                $stmt->bindParam(':status', $status);
 
-        $crud = new Conn();
+                $stmt->execute();
 
-        $crud->insert($title, $desc, $status);
+                if(!$stmt->execute((array($title, $desc, $status)))) {
+                    $error = $stmt->errorInfo();
+                    $stmt = null;
 
-        header('location: ../../index.php');
-
+                    header('location: ../views/form.php?stmtfailed&message='.urlencode($error[2]));
+                    exit();
+                }
+            }
+            catch (PDOException $e) {
+                echo "error".$e->getMessage();
+            }
+       }
     }
-
 ?>

@@ -10,14 +10,14 @@
         <a href="list.php"><button type="submit" class="btn btn-outline-light">Back</button></a>
     </section>
 
-    <form class="row g-3 bg-light p-4 mt-3 w-50" action="../controller/data.contr.php" id="save" method="post">
+    <form class="row g-3 bg-light p-4 mt-3 w-50" action="../includes/data.inc.php" id="save" method="post">
         <div class="col-md-6">
             <label for="inputEmail4" class="form-label">Title</label>
-            <input type="text" name="title" class="form-control" id="inputEmail4">
+            <input type="text" name="title" class="form-control" id="inputEmail4" required>
         </div>
         <div class="col-12">
             <div class="form-floating">
-            <textarea class="form-control" name="desc" placeholder="Leave your description here" id="floatingTextarea2" style="height: 100px"></textarea>
+            <textarea class="form-control" name="desc" placeholder="Leave your description here" id="floatingTextarea2" style="height: 100px" required></textarea>
             <label for="floatingTextarea2">Description</label>
             </div>  
         </div>
@@ -29,7 +29,7 @@
             </div>
             <div class="form-check form-check-inline">
                 <label for="">
-                   <input type="radio" name="status" id="" value="normal"> Normal
+                   <input type="radio" name="status" id="" value="normal" > Normal
                 </label>
             </div>
         </div>

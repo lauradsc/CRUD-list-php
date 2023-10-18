@@ -21,22 +21,6 @@
             }
         }
 
-        public function insert($title, $desc, $status) {
-            $pdo = $this->connect();
-
-            try {
-                $stmt = $pdo->prepare("INSERT INTO tasks (title, description, status) values (:title, :description, :status)");
-                $stmt->bindParam(':title', $title);
-                $stmt->bindParam(':description', $desc);
-                $stmt->bindParam(':status', $status);
-
-                $stmt->execute();
-            }
-            catch (PDOException $e) {
-                echo "error".$e->getMessage();
-            }
-
-        }
     }
 
 ?>
