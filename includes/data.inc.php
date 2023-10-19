@@ -8,7 +8,7 @@ $status = $_POST['status'];
 
 if (isset($_POST['submit']) && $title != "" && $desc != "" && $status != "") {
 
-    include '../controller/data.contr.php';
+    include '../classes/data.contr.classes.php';
 
     $crud = new DataContr();
 
@@ -18,3 +18,7 @@ if (isset($_POST['submit']) && $title != "" && $desc != "" && $status != "") {
 } else {
     header('location: ../views/form.php?error=none');
 }
+
+
+
+?>
