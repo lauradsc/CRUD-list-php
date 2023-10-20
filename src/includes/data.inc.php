@@ -8,17 +8,16 @@ $status = $_POST['status'];
 
 if (isset($_POST['submit']) && $title != "" && $desc != "" && $status != "") {
 
-    include '../classes/data.contr.classes.php';
+    include '../controller/data.contr.class.php';
 
     $crud = new DataContr();
 
     $crud->insert($title, $desc, $status);
 
-    header('location: ../../list.php');
+    header('location: ../views/list.php');
 } else {
     header('location: ../views/form.php?error=none');
 }
-
 
 
 ?>

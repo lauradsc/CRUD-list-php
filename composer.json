@@ -1,8 +1,0 @@
-{
-    "name": "next/project",
-    "autoload" : {
-        "psr-4": {
-            "classes\\" : "classes/"
-        }
-    }
-}

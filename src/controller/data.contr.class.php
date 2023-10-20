@@ -1,7 +1,7 @@
 <?php 
 
    //NOTE - my conversation between the model and view
-      include 'conn.classes.php';
+      include '../model/config/conn.class.php';
       
        class DataContr extends Conn {
 
@@ -30,30 +30,27 @@
             }
        }
 
-       public function select($title, $desc, $status) {
+       public function select() {
             $pdo = $this->connect();
-            $results = [];
             try {
                 $stmt = $pdo->prepare("SELECT title, description, status FROM tasks");
                 $stmt->execute();
-                
-                if(!$stmt->execute(array($title, $desc, $status))) {
-                    $error = $stmt->errorInfo();
-                    $stmt = null;
-
-                    header('location: ../views/form.php?stmtfailed&message='.urlencode($error[2]));
-                    exit();
+                $count = $stmt->rowCount();
+                if($count > 0) {
+                    return $stmt;
                 }
+                else {
+                    return null;
+
+                }
+                
             }
+
             catch (PDOException $e) {
                 echo "error".$e->getMessage();
             }
 
-            return $results;
         }
 
-        public function oi() {
-            echo "iu";
-        }
     }
 ?>

@@ -2,6 +2,7 @@
     include '../assets/components/body.php';
     $body = new Body();
     $body->header();
+
 ?>
 
 <!-- //NOTE - the interface -->

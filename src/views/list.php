@@ -2,6 +2,11 @@
     include '../assets/components/body.php';
     $body = new Body();
     $body->header();
+
+    include '../controller/data.contr.class.php';
+    $allData = new DataContr();
+    $stmt = $allData->select();
+
 ?>
 
 <main class="container">
@@ -11,18 +16,18 @@
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
-      <th scope="col">Handle</th>
     </tr>
     
   </thead>
   <tbody>
-  <?php foreach ($select as $value) : ?>
-      <tr>
-      <td scope="col"><?php htmlspecialchars($value['title']) ?></td>
-      <td scope="col"><?php htmlspecialchars($value['description']) ?></td>
-      <td scope="col"><?php htmlspecialchars($value['status']) ?></td>
-    </tr> 
-    <?php endforeach; ?>
+  <?php foreach ($stmt as $row): ?>
+    <tr>
+      <td><?= htmlspecialchars($row['title']) ?></td>
+      <td><?= htmlspecialchars($row['description']) ?></td>
+      <td><?= htmlspecialchars($row['status']) ?></td>
+    </tr>
+  <?php endforeach; ?>
+
   </tbody>
 </table>
 
