@@ -9,13 +9,13 @@
 
 ?>
 
-<main class="container">
-<table class="table table-responsive border">
+<main class="container d-flex justify-content-center mt-5">
+<table class="table table-responsive borderless w-50">
   <thead>
   <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Status</th>
     </tr>
     
   </thead>
