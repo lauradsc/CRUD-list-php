@@ -6,18 +6,16 @@
        class DataContr extends Conn {
 
         
-        public function insert($title, $desc, $status) {
+        public function insert($desc) {
             $pdo = $this->connect();
 
             try {
-                $stmt = $pdo->prepare("INSERT INTO tasks (title, description, status) values (:title, :description, :status)");
-                $stmt->bindParam(':title', $title);
+                $stmt = $pdo->prepare("INSERT INTO tasks ( description ) values ( :description)");
                 $stmt->bindParam(':description', $desc);
-                $stmt->bindParam(':status', $status);
 
                 $stmt->execute();
 
-                if(!$stmt->execute((array($title, $desc, $status)))) {
+                if(!$stmt->execute((array($desc)))) {
                     $error = $stmt->errorInfo();
                     $stmt = null;
 
@@ -33,23 +31,38 @@
        public function select() {
             $pdo = $this->connect();
             try {
-                $stmt = $pdo->prepare("SELECT title, description, status FROM tasks");
+                $stmt = $pdo->prepare("SELECT description FROM tasks");
                 $stmt->execute();
                 $count = $stmt->rowCount();
+
                 if($count > 0) {
-                    return $stmt;
+                   $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                   return $results;
                 }
                 else {
-                    return null;
-
+                    echo '';
                 }
-                
             }
 
             catch (PDOException $e) {
                 echo "error".$e->getMessage();
             }
 
+        }
+
+        public function delete($id) {
+            $pdo = $this->connect();
+
+            try {
+                $stmt = $pdo->prepare("DELETE FROM tasks where idtasks = :id");
+                $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+                $stmt->execute();
+
+            }
+            
+            catch (PDOException $e) {
+                echo "error".$e->getMessage();
+            }
         }
 
     }

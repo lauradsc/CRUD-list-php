@@ -2,22 +2,26 @@
 
 //NOTE - my verification between the model and view
 
-$title = $_POST['title'];
-$desc = $_POST['desc'];
-$status = $_POST['status'];
 
-if (isset($_POST['submit']) && $title != "" && $desc != "" && $status != "") {
+$desc = $_POST['desc'];
+
+
+if (isset($_POST['submit']) && $desc != "") {
 
     include '../controller/data.contr.class.php';
 
     $crud = new DataContr();
 
-    $crud->insert($title, $desc, $status);
+    $crud->insert($desc);
 
     header('location: ../views/list.php');
 } else {
     header('location: ../views/form.php?error=none');
 }
+
+$_GET['id'];
+
+  
 
 
 ?>

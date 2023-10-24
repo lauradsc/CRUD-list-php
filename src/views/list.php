@@ -8,28 +8,43 @@
     $stmt = $allData->select();
 
 ?>
+<main class="container d-flex justify-content-center mt-5">
+
+  <form class="row g-3 bg-light p-4 mt-3 w-50 rounded shadow" action="../includes/data.inc.php" height="50vh" id="save"
+    method="post">
+    <h3>Todo List</h3>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" name="desc" placeholder="Leave your description here" aria-label="Recipient's username"
+        aria-describedby="basic-addon2">
+      <button class="input-group-text btn btn-primary " id="basic-addon2" type="submit"  name="submit">Save</button>
+    </div>
+    <!-- <div class="col-12">
+            <div class="form-check form-check-inline">
+                <label for="">
+                    <input type="radio" name="status" id="" value="urgent" class="mt-2" checked> Urgente
+                </label>
+            </div>
+            <div class="form-check form-check-inline mt-3">
+                <label for="">
+                    <input type="radio" name="status" id="" value="normal"> Normal
+                </label>
+            </div>
+        </div> -->
+  </form>
+</main>
 
 <main class="container d-flex justify-content-center mt-5">
-<table class="table table-responsive borderless w-50">
-  <thead>
-  <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Description</th>
-      <th scope="col">Status</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-  <?php foreach ($stmt as $row): ?>
-    <tr>
-      <td><?= htmlspecialchars($row['title']) ?></td>
-      <td><?= htmlspecialchars($row['description']) ?></td>
-      <td><?= htmlspecialchars($row['status']) ?></td>
-    </tr>
-  <?php endforeach; ?>
-
-  </tbody>
-</table>
+  <table class="table table-responsive borderless w-50">
+    <tbody>
+      <?php foreach ((array)$stmt as $row): ?>
+      <tr>
+        <td><input class="form-check" type="checkbox" value="" id="flexCheckDefault"></td>
+        <td><?= htmlspecialchars($row['description']) ?></td>
+        <td><button type="submit" name="delete" class="btn btn-outline-danger btn-sm float-end"><i class="bi bi-trash"></button></td>
+      <?php endforeach; ?>
+      </tr>
+    </tbody>
+  </table>
 
 </main>
 
