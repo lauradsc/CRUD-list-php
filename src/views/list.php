@@ -40,9 +40,15 @@
       <tr>
         <td><input class="form-check" type="checkbox" value="" id="flexCheckDefault"></td>
         <td><?= htmlspecialchars($row['description']) ?></td>
-        <td><button type="submit" name="delete" class="btn btn-outline-danger btn-sm float-end"><i class="bi bi-trash"></button></td>
+        <form action="../includes/data.inc.php" method="POST">
+        <td>
+        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+        <input type="submit" name="delete" class="btn btn-outline-danger btn-sm float-end">
+        </form>
+        </td>
+        </tr>
+
       <?php endforeach; ?>
-      </tr>
     </tbody>
   </table>
 

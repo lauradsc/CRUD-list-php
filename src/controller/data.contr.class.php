@@ -54,9 +54,10 @@
             $pdo = $this->connect();
 
             try {
-                $stmt = $pdo->prepare("DELETE FROM tasks where idtasks = :id");
+                $stmt = $pdo->prepare("DELETE FROM tasks where id  = :id");
                 $stmt->bindParam(':id', $id, PDO::PARAM_INT);
                 $stmt->execute();
+
 
             }
             
@@ -66,4 +67,6 @@
         }
 
     }
+
+    
 ?>
