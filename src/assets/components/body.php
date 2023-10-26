@@ -1,6 +1,6 @@
 <?php 
     class Body {
-        public function header($style = "./assets/css/style.css", $title = "test", $favicon = "") {
+        public function header($style = "/../css/style.css", $title = "To do list", $favicon = "") {
             echo '<!doctype html>
             <html lang="en">
               <head>
@@ -11,7 +11,7 @@
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
                 <link rel="stylesheet" href="'.$style.'">              
                 </head>
-              <body class="text-dark">
+              <body class="text-dark bg-light bg-gradient">
                 <nav class="navbar">
                 <div class="container">
                   <a class="navbar-brand" href="#">

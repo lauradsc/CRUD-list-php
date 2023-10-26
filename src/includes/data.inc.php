@@ -1,41 +1,26 @@
 <?php
-
 //NOTE - my verification between the model and view
+include '../controller/data.contr.class.php';
 
+$crud = new DataContr();
 
+$description = $_POST['desc'];
 
-
-if (isset($_POST['submit']) && $desc != "") {
-
-    include '../controller/data.contr.class.php';
-
-    $desc = $_POST['desc'];
-
-    $crud = new DataContr();
-
-    $crud->insert($desc);
-
+if (isset($_POST['submit']) && $description != "")
+{
+    $crud->insert($description);
     header('location: ../views/list.php');
-} else {
-     header('location: ../views/form.php?error=none');
 }
-
-if(isset($_POST['delete'])) {
-    include '../controller/data.contr.class.php';
-
-    $id = $_GET['id'];
-    $crud = new DataContr();
+elseif (isset($_POST['id']) != null)
+{
+    $id = $_POST['id'];
 
     $crud->delete($id);
-}
-
-else {
     header('location: ../views/list.php');
 }
+else echo '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script> 
+    alert("error")
+</script>';
 
-  
-var_dump($_GET['id']);
-echo $id;
 
-
-?>
