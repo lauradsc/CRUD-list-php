@@ -1,6 +1,6 @@
 <?php
 //NOTE - my conversation between the model and view
-include '../model/config/conn.class.php';
+include '../model/conn.class.php';
 
 class DataContr extends Conn
 {
