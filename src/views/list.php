@@ -22,9 +22,9 @@
   <tbody>
   <?php foreach ($stmt as $row): ?>
     <tr>
-      <td><?= htmlspecialchars($row['title']) ?></td>
-      <td><?= htmlspecialchars($row['description']) ?></td>
-      <td><?= htmlspecialchars($row['status']) ?></td>
+      <td><?= $row['title'] ?></td>
+      <td><?= $row['description'] ?></td>
+      <td><?= $row['status'] ?></td>
     </tr>
   <?php endforeach; ?>
 
