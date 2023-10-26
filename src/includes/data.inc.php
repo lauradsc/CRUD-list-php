@@ -17,7 +17,7 @@ if (isset($_POST['submit']) && $desc != "") {
 
     header('location: ../views/list.php');
 } else {
-    // header('location: ../views/form.php?error=none');
+     header('location: ../views/form.php?error=none');
 }
 
 if(isset($_POST['delete'])) {
