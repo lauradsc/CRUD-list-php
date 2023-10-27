@@ -5,22 +5,26 @@ include '../controller/data.contr.class.php';
 $crud = new DataContr();
 
 $description = $_POST['desc'];
+$newDescription = $_POST['newDescription'];
 
 if (isset($_POST['submit']) && $description != "")
 {
     $crud->insert($description);
     header('location: ../views/list.php');
 }
-elseif (isset($_POST['id']) != null)
+
+if (isset($_GET['id']) != null)
 {
-    $id = $_POST['id'];
+    $id = $_GET['id'];
 
     $crud->delete($id);
     header('location: ../views/list.php');
 }
-else echo '<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script> 
-    alert("error")
-</script>';
 
+if(isset($_POST['edit']) && $newDescription != null) {
+    
+    $crud->edit($newDescription);
+    header('location: ../views/list.php');
+
+}
 

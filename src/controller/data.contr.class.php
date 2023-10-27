@@ -76,14 +76,13 @@ class DataContr extends Conn
         }
     }
 
-    public function edit($id, $newDescription)
+    public function edit($newDescription)
     {
         $pdo = $this->connect();
 
         try
         {
             $stmt = $pdo->prepare("UPDATE tasks set description = :newDescription");
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
             $stmt->bindParam(':newDescription', $newDescription, PDO::PARAM_STR);
 
             $stmt->execute();
