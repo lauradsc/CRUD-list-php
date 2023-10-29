@@ -38,7 +38,7 @@ class DataContr extends Conn
         $pdo = $this->connect();
         try
         {
-            $stmt = $pdo->prepare("SELECT id, description FROM tasks limit 10");
+            $stmt = $pdo->prepare("SELECT id, description FROM tasks");
             $stmt->execute();
             $count = $stmt->rowCount();
 
@@ -60,14 +60,14 @@ class DataContr extends Conn
 
     }
 
-    public function delete($id)
+    public function delete($taskId)
     {
         $pdo = $this->connect();
 
         try
         {
-            $stmt = $pdo->prepare("DELETE FROM tasks where id  = :id");
-            $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+            $stmt = $pdo->prepare("DELETE FROM tasks where id  = :taskId");
+            $stmt->bindParam(':taskId', $taskId, PDO::PARAM_INT);
             $stmt->execute();
         }
         catch(PDOException $e)
@@ -76,14 +76,15 @@ class DataContr extends Conn
         }
     }
 
-    public function edit($newDescription)
+    public function edit($newDescription, $taskId)
     {
         $pdo = $this->connect();
 
         try
         {
-            $stmt = $pdo->prepare("UPDATE tasks set description = :newDescription");
+            $stmt = $pdo->prepare("UPDATE tasks set description = :newDescription where id = :taskId");
             $stmt->bindParam(':newDescription', $newDescription, PDO::PARAM_STR);
+            $stmt->bindParam(':taskId', $taskId, PDO::PARAM_INT);
 
             $stmt->execute();
         }

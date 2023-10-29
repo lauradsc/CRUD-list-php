@@ -5,7 +5,7 @@ include '../controller/data.contr.class.php';
 $crud = new DataContr();
 
 $description = $_POST['desc'];
-$newDescription = $_POST['newDescription'];
+
 
 if (isset($_POST['submit']) && $description != "")
 {
@@ -15,16 +15,25 @@ if (isset($_POST['submit']) && $description != "")
 
 if (isset($_GET['id']) != null)
 {
-    $id = $_GET['id'];
+    $taskId = $_GET['id'];
 
-    $crud->delete($id);
+    $crud->delete($taskId);
     header('location: ../views/list.php');
 }
 
-if(isset($_POST['edit']) && $newDescription != null) {
+if(isset($_POST['edit'])) {
     
-    $crud->edit($newDescription);
-    header('location: ../views/list.php');
+    if(isset($_POST['newDescription'])) {
+
+        $newDescription = $_POST['newDescription'];
+        $taskId = $_POST['edit'];
+
+        $crud->edit($newDescription, $taskId);
+        header('location: ../views/list.php');
+        
+    } else {
+        echo "error";
+    }
 
 }
 

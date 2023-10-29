@@ -37,10 +37,10 @@
                 class="bi bi-trash text-white"></i></button>
           </form>
 
-          <button type="submit" class="btn btn-sm float-end  mr-2" data-bs-toggle="modal" data-bs-target="#modaledit"
+          <button type="submit" class="btn btn-sm float-end  mr-2" data-bs-toggle="modal" data-bs-target="#modal_<?= $row['id'] ?>"
             style="background-color: #9C86FF;"><i class="bi bi-pencil-square text-white"></i></button>
 
-            <div class="modal fade" id="modaledit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modal_<?= $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -52,6 +52,7 @@
                   <div class="input-group mb-3">
                       <input type="text" class="form-control" name="newDescription" placeholder="edit your task..."
                         aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        
                       <button class="input-group-text btn text-white" id="basic-addon2" type="submit"
                         name="edit" style="background-color: #9C86FF;"  value="<?= $row['id'] ?>">edit</button>
                     </form>
