@@ -10,8 +10,18 @@ $description = $_POST['desc'];
 if (isset($_POST['submit']) && $description != "")
 {
     $crud->insert($description);
-    header('location: ../views/list.php');
+    $correctMsg = "success";
+    header('location: ../views/list.php'. urlencode($correctMsg));
+} 
+else {
+
+echo "error";
+
+  header('location: ../views/list.php');
+
+die();
 }
+
 
 if (isset($_GET['id']) != null)
 {
@@ -20,6 +30,15 @@ if (isset($_GET['id']) != null)
     $crud->delete($taskId);
     header('location: ../views/list.php');
 }
+else {
+
+    echo "error";
+    
+      header('location: ../views/list.php');
+    
+      die();
+    }
+    
 
 if(isset($_POST['edit'])) {
     
@@ -32,8 +51,16 @@ if(isset($_POST['edit'])) {
         header('location: ../views/list.php');
         
     } else {
+
         echo "error";
-    }
+        
+          header('location: ../views/list.php');
+
+          die();
+        
+        
+        }
+        
 
 }
 
