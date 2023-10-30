@@ -29,7 +29,7 @@
       <tr>
         <td>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" onclick="checked()">
+            <input class="form-check-input" type="checkbox" value="" id="check">
           </div>
         </td>
         <td><?= htmlspecialchars($row['description']) ?></td>
@@ -74,5 +74,19 @@
   </table>
 
 </main>
+
+<script>
+  let checkBox = document.getElementById('check');
+  
+  checkBox.addEventListener("click", () => {
+    if(checkBox.checked) {
+        checkBox.classList.add('');
+    } else {
+        alert("legal");
+    }
+
+  })
+
+</script>
 
 <?php $body->footer(); ?>

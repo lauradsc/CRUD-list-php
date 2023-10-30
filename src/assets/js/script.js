@@ -1,10 +1,10 @@
-let checkBox = document.getElementById('flexCheckDefault');
+let checkBox = document.getElementById('check');
+  
+check.addEventListener("click", () => {
+  if(checkBox.checked) {
+      alert("socorro");
+  } else {
+      alert("legal");
+  }
 
-function checked() {
-    if(checkBox.checked = true) {
-        checkBox.classList.add('');
-    }
-
-}
-
-checked();
+})
