@@ -8,6 +8,7 @@
     $stmt = $allData->select();
 
 ?>
+
 <main class="container d-flex justify-content-center mt-5">
 
   <form class="row g-3 bg-light p-4 mt-3 w-50 rounded shadow" action="../includes/data.inc.php" height="50vh" id="save"
@@ -32,7 +33,7 @@
             <input class="form-check-input" type="checkbox" value="" id="check">
           </div>
         </td>
-        <td><?= htmlspecialchars($row['description']) ?></td>
+        <td id="descriptionChecked"><?= htmlspecialchars($row['description']) ?></td>
         <td>
           <form action="../includes/data.inc.php" method="GET">
             <input type="hidden" name="id" value="<?= htmlspecialchars($row['id']) ?>">
@@ -77,13 +78,15 @@
 
 <script>
   let checkBox = document.getElementById('check');
-  
+  let descriptionChecked = document.getElementById('descriptioChecked');
+
   checkBox.addEventListener("click", () => {
     if(checkBox.checked) {
-        checkBox.classList.add('');
-    } else {
-        alert("legal");
-    }
+      descriptionChecked.href = 'style.css';   
+     } else {
+      descriptionChecked.href = '';   
+
+     }
 
   })
 
