@@ -1,7 +1,7 @@
 <?php 
 
     class Body {
-        public function header($style = "/../css/style.css", $title = "Todo list", $favicon = "cat-health-list.png") {
+        public function header($style = "/../css/style.css", $title = "Todo list project", $favicon = "cat-health-list.png") {
             echo '<!doctype html>
             <html lang="en">
               <head>
