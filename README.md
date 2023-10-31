@@ -5,7 +5,9 @@
   
 https://lauradsc.github.io/next-project/
 <h3> The proccess...</h3>
-<img src="![image](https://github.com/lauradsc/next-project/assets/99484087/ee8d0c5b-d809-4afd-ba1b-3fdbb10a0066)">
+
+![todolist](https://github.com/lauradsc/next-project/assets/99484087/990bb4b2-0f31-421e-8b39-95eb007897ef)
 
 
 </p>
+
