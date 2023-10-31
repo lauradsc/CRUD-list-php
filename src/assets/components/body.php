@@ -16,13 +16,9 @@
            
                 </head>
               <body class="text-dark bg-light bg-gradient">
-                <nav class="navbar">
-                <div class="container">
-                  <a class="navbar-brand" href="#">
-                    <img src="" alt="" class="w-75">
-                  </a>
-                </div>
-              </nav>
+                
+
+              <h1 class="text-center mt-5">To do List</h1>
             ';
         }
 
