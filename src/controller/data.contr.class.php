@@ -5,27 +5,16 @@ include '../model/conn.class.php';
 class DataContr extends Conn
 {
 
-    public function insert($desc)
+    public function insert($description)
     {
         $pdo = $this->connect();
 
         try
         {
             $stmt = $pdo->prepare("INSERT INTO tasks ( description ) values ( :description)");
-            $stmt->bindParam(':description', $desc);
+            $stmt->bindParam(':description', $description);
 
             $stmt->execute();
-
-            if (!$stmt->execute((array(
-                $desc
-            ))))
-            {
-                $error = $stmt->errorInfo();
-                $stmt = null;
-
-                header('location: ../views/form.php?stmtfailed&message=' . urlencode($error[2]));
-                exit();
-            }
         }
         catch(PDOException $e)
         {

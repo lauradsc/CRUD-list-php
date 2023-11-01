@@ -4,24 +4,16 @@ include '../controller/data.contr.class.php';
 
 $crud = new DataContr();
 
-$description = $_POST['desc'];
-
-
-if (isset($_POST['submit']) && $description != "")
+if (isset($_POST['submit']))
 {
-    $crud->insert($description);
-    $correctMsg = "success";
-    header('location: ../views/list.php'. urlencode($correctMsg));
-} 
-else {
+    $description = $_POST['desc'];
 
-echo "error";
-
-  header('location: ../views/list.php');
-
-die();
+    if ($description != "")
+    {
+        $crud->insert($description);
+        header('location: ../views/list.php');
+    }
 }
-
 
 if (isset($_GET['id']) != null)
 {
@@ -29,38 +21,20 @@ if (isset($_GET['id']) != null)
 
     $crud->delete($taskId);
     header('location: ../views/list.php');
+
 }
-else {
 
-    echo "error";
-    
-      header('location: ../views/list.php');
-    
-      die();
-    }
-    
-
-if(isset($_POST['edit'])) {
-    
-    if(isset($_POST['newDescription'])) {
+if (isset($_POST['edit']))
+{
+  if (isset($_POST['newDescription']))
+    {
 
         $newDescription = $_POST['newDescription'];
         $taskId = $_POST['edit'];
 
         $crud->edit($newDescription, $taskId);
         header('location: ../views/list.php');
-        
-    } else {
 
-        echo "error";
-        
-          header('location: ../views/list.php');
-
-          die();
-        
-        
-        }
-        
-
+    }
 }
 
