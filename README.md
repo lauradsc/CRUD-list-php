@@ -5,7 +5,7 @@
   
 
 <h3> The proccess...</h3>
-![actualdesign](https://github.com/lauradsc/next-project/assets/99484087/67185ea3-31ef-48ff-a90e-c101f175b38a)
+https://github.com/lauradsc/next-project/assets/99484087/67185ea3-31ef-48ff-a90e-c101f175b38a
 
 </p>
 
