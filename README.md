@@ -14,3 +14,11 @@
 
 </p>
 
+<h1>CRUD para Cadastro de clientes</h1>
+
+<h2>Descrição</h2>
+<p>Este é um projeto de Cadastro de Clientes desenvolvido utilizando PHP, MySQL e Bootstrap em uma estrutura básica em MVC. 
+O objetivo principal é criar uma aplicação para listar, gerenciar, consultar os clientes no banco </p>
+
+
+
