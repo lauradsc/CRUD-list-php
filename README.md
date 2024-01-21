@@ -25,7 +25,7 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 - PHP 8.3.1
 - MySQL 8.3.0
 - Docker
-- Bootstrap
+- Bootstrap 4.6.2
 - AJAX
 
 <h2>Estrutura de projeto</h2>
