@@ -42,15 +42,7 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 
 <code>git clone https://github.com/C4mps41205/AvaliacaoDesenvolvedorPhpGrupoConfianca.git </code>
 
-<b>3 - Inicialize os serviços do Docker compose (no diretório raiz em que o dockerfile está): </b> <br>
-
-<code>docker-compose up -d</code>
-
-<b>4 - Instale as dependências do PHP</b>
-
-<code>docker-compose exec php composer install</code>
-
-<b>5 - Acesso ao banco de dados </b>
+<b>3 - Acesso ao banco de dados </b>
 
 <p>Para acessar o banco, acesse o arquivo</p>
 
