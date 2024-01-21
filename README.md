@@ -49,7 +49,7 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 <code>./app/settings/grupo-confianca-db.sql</code>
 
 <h2>Nota</h2>
-<p>Fico feliz por ter tido de a oportunidade de desenvolver esse projeto e aprimorar mais minhas habilidades com ele! O código apresenta os requisitos solicitados para o CRUD, utilizando o back-end como fonte e front-end feito com bootstrap para exibir. Peço perdão qualquer erro ou falha, estou aberto a ajudas e feedbacks. Espero ter entregado um bom projeto e que possa ser positivamente avaliado. /p>
+<p>Fico feliz por ter tido de a oportunidade de desenvolver esse projeto e aprimorar mais minhas habilidades com ele! O código apresenta os requisitos solicitados para o CRUD, utilizando o back-end como fonte e front-end feito com bootstrap para exibir. Peço perdão qualquer erro ou falha, estou aberto a ajudas e feedbacks. Espero ter entregado um bom projeto e que possa ser positivamente avaliado. </p>
 
 <h3>Muito obrigado!😊</h3>
 
