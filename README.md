@@ -42,7 +42,7 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 
 <code>git clone https://github.com/C4mps41205/AvaliacaoDesenvolvedorPhpGrupoConfianca.git </code>
 
-<b>3 - Inicialize os serviços do Docker compose: </b> <br>
+<b>3 - Inicialize os serviços do Docker compose (no diretório raiz em que o dockerfile está): </b> <br>
 
 <code>docker-compose up -d</code>
 
