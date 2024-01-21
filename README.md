@@ -30,7 +30,7 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 
 <h2>Estrutura de projeto</h2>
 <p>Aqui está a estrutura do projeto:</p>
-<img src="https://github.com/lauradsc/CRUD-list-php/assets/99484087/122f215e-84fc-4848-9418-62370a481cf0">
+<img src="">
 
 <h2>Instalação e Funcionamento</h2>
 
@@ -44,11 +44,17 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 
 <b>3 - Acesso ao banco de dados </b>
 
+<p>para testar, você preisa criar uma nova instância de banco de dados MySQL utilizando as seguintes credênciais: </p>
+
+- host: ipv4 da máquina
+- porta: 3306
+- usuario: root
+- senha: root-grupo-confianca
+
 <p>Para acessar o banco, acesse o arquivo</p>
 
 <code>./app/settings/grupo-confianca-db.sql</code>
 
-<p>para testar, você preisa criar uma nova instância de banco de dados MySQL utilizando as seguintes credênciais: </p>
 
 <b>Caso haja sucesso com a instalação e configuração, você precisa ter esse resultado:</b>
 
@@ -60,6 +66,8 @@ O objetivo principal é criar uma aplicação para listar, gerenciar, consultar 
 <h3>Muito obrigado!😊</h3>
 
 <h2>Aqui está um vídeo apresentando toda a funcionalidade do projeto:</h2>
+
+
 
 
 
